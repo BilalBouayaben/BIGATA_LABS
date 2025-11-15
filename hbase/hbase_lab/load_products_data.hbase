@@ -1,0 +1,72 @@
+# Charger les données de purchases2.txt dans la table products
+# Format: ROW_KEY,date,time,town,product,price,quantity,payment
+
+put 'products','8','cf:date','2023-01-15'
+put 'products','8','cf:time','10:30'
+put 'products','8','cf:town','Paris'
+put 'products','8','cf:product','Chair'
+put 'products','8','cf:price','299.99'
+put 'products','8','cf:quantity','5'
+put 'products','8','cf:payment','1499.95'
+
+put 'products','12','cf:date','2023-02-20'
+put 'products','12','cf:time','14:45'
+put 'products','12','cf:town','Lyon'
+put 'products','12','cf:product','Table'
+put 'products','12','cf:price','599.50'
+put 'products','12','cf:quantity','2'
+put 'products','12','cf:payment','1199.00'
+
+put 'products','15','cf:date','2023-03-10'
+put 'products','15','cf:time','09:15'
+put 'products','15','cf:town','Marseille'
+put 'products','15','cf:product','Lamp'
+put 'products','15','cf:price','45.00'
+put 'products','15','cf:quantity','10'
+put 'products','15','cf:payment','450.00'
+
+put 'products','23','cf:date','2023-04-05'
+put 'products','23','cf:time','16:20'
+put 'products','23','cf:town','Toulouse'
+put 'products','23','cf:product','Desk'
+put 'products','23','cf:price','399.99'
+put 'products','23','cf:quantity','3'
+put 'products','23','cf:payment','1199.97'
+
+put 'products','31','cf:date','2023-05-12'
+put 'products','31','cf:time','11:00'
+put 'products','31','cf:town','Nice'
+put 'products','31','cf:product','Sofa'
+put 'products','31','cf:price','899.00'
+put 'products','31','cf:quantity','1'
+put 'products','31','cf:payment','899.00'
+
+put 'products','42','cf:date','2023-06-18'
+put 'products','42','cf:time','13:30'
+put 'products','42','cf:town','Nantes'
+put 'products','42','cf:product','Bed'
+put 'products','42','cf:price','749.99'
+put 'products','42','cf:quantity','2'
+put 'products','42','cf:payment','1499.98'
+
+put 'products','55','cf:date','2023-07-22'
+put 'products','55','cf:time','10:45'
+put 'products','55','cf:town','Strasbourg'
+put 'products','55','cf:product','Bookshelf'
+put 'products','55','cf:price','199.50'
+put 'products','55','cf:quantity','4'
+put 'products','55','cf:payment','798.00'
+
+put 'products','68','cf:date','2023-08-30'
+put 'products','68','cf:time','15:00'
+put 'products','68','cf:town','Bordeaux'
+put 'products','68','cf:product','Cabinet'
+put 'products','68','cf:price','349.00'
+put 'products','68','cf:quantity','3'
+put 'products','68','cf:payment','1047.00'
+
+# Scanner la table pour vérifier
+scan 'products'
+
+# Vérifier l'enregistrement numéro 8
+get 'products','8',{COLUMN => 'cf:town'}

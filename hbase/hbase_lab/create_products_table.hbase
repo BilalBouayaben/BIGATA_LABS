@@ -1,0 +1,3 @@
+# Créer la table products avec une famille de colonnes cf
+create 'products','cf'
+exit

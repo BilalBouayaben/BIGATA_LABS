@@ -1,0 +1,2 @@
+# Test 3: SingleColumnValueFilter - lignes où sales:amount >= $450.00
+scan 'sales_ledger', {FILTER => "SingleColumnValueFilter('sales', 'amount', =, 'binary:$450.00')"}

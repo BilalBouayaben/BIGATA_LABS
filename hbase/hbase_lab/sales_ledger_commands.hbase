@@ -1,0 +1,35 @@
+# Créer la table sales_ledger avec les familles de colonnes customer et sales
+create 'sales_ledger','customer','sales'
+
+# Vérifier que la table est bien créée
+list
+
+# Insérer les différentes lignes pour ROW_ID 101
+put 'sales_ledger','101','customer:name','John White'
+put 'sales_ledger','101','customer:city','Los Angeles, CA'
+put 'sales_ledger','101','sales:product','Chairs'
+put 'sales_ledger','101','sales:amount','$400.00'
+
+# Insérer les différentes lignes pour ROW_ID 102
+put 'sales_ledger','102','customer:name','Jane Brown'
+put 'sales_ledger','102','customer:city','Atlanta, GA'
+put 'sales_ledger','102','sales:product','Lamps'
+put 'sales_ledger','102','sales:amount','$200.00'
+
+# Insérer les différentes lignes pour ROW_ID 103
+put 'sales_ledger','103','customer:name','Bill Green'
+put 'sales_ledger','103','customer:city','Pittsburgh, PA'
+put 'sales_ledger','103','sales:product','Desk'
+put 'sales_ledger','103','sales:amount','$500.00'
+
+# Insérer les différentes lignes pour ROW_ID 104
+put 'sales_ledger','104','customer:name','Jack Black'
+put 'sales_ledger','104','customer:city','St. Louis, MO'
+put 'sales_ledger','104','sales:product','Bed'
+put 'sales_ledger','104','sales:amount','$1,600.00'
+
+# Visualiser le résultat de l'insertion
+scan 'sales_ledger'
+
+# Afficher les valeurs de la colonne product de la ligne 102
+get 'sales_ledger','102',{COLUMN => 'sales:product'}

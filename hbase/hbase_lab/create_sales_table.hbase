@@ -1,0 +1,35 @@
+# Script HBase pour créer la table sales et charger les données
+# Basé sur le Lab 4: HBase - Première utilisation
+
+# Créer la table 'sales' avec deux familles de colonnes: 'customer' et 'sales'
+create 'sales', 'customer', 'sales'
+
+# Insérer les données pour ROW_ID 101 - John White
+put 'sales', '101', 'customer:name', 'John White'
+put 'sales', '101', 'customer:city', 'Los Angeles, CA'
+put 'sales', '101', 'sales:product', 'Chairs'
+put 'sales', '101', 'sales:amount', '$400.00'
+
+# Insérer les données pour ROW_ID 102 - Jane Brown
+put 'sales', '102', 'customer:name', 'Jane Brown'
+put 'sales', '102', 'customer:city', 'Atlanta, GA'
+put 'sales', '102', 'sales:product', 'Lamps'
+put 'sales', '102', 'sales:amount', '$200.00'
+
+# Insérer les données pour ROW_ID 103 - Bill Green
+put 'sales', '103', 'customer:name', 'Bill Green'
+put 'sales', '103', 'customer:city', 'Pittsburgh, PA'
+put 'sales', '103', 'sales:product', 'Desk'
+put 'sales', '103', 'sales:amount', '$500.00'
+
+# Insérer les données pour ROW_ID 104 - Jack Black
+put 'sales', '104', 'customer:name', 'Jack Black'
+put 'sales', '104', 'customer:city', 'St. Louis, MO'
+put 'sales', '104', 'sales:product', 'Bed'
+put 'sales', '104', 'sales:amount', '$1,600.00'
+
+# Afficher toutes les données de la table
+scan 'sales'
+
+# Afficher les informations sur la table
+describe 'sales'

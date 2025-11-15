@@ -1,0 +1,5 @@
+# Vérifier que la table 'user' a été créée
+list
+
+# Scanner la table user pour voir les données
+scan 'user'

@@ -1,0 +1,2 @@
+# Modifier le filtre pour exclure customer et afficher uniquement sales
+scan 'sales_ledger', {FILTER => "FamilyFilter(=, 'binary:sales')"}

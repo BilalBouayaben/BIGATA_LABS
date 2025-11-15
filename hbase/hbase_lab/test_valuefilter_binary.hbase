@@ -1,0 +1,2 @@
+# Test 2: ValueFilter avec binary:Sofa (égalité exacte)
+scan 'sales_ledger', {FILTER => "ValueFilter(=, 'binary:Sofa')"}

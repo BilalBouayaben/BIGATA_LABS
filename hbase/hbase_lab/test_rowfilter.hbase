@@ -1,0 +1,2 @@
+# Test du filtre RowFilter - afficher uniquement les lignes où la clé est supérieure à '102'
+scan 'sales_ledger', {FILTER => "RowFilter(>, 'binary:102')"}

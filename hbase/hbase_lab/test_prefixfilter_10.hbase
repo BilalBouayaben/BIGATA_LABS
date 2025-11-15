@@ -1,0 +1,2 @@
+# Test 5: PrefixFilter - lignes commençant par '10'
+scan 'sales_ledger', {FILTER => "PrefixFilter('10')"}

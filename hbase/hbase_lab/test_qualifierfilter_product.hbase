@@ -1,0 +1,2 @@
+# Tester QualifierFilter avec un autre qualifier - 'product'
+scan 'sales_ledger', {FILTER => "QualifierFilter(=, 'binary:product')"}

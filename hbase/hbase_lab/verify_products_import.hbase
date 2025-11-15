@@ -1,0 +1,5 @@
+# Scanner la table products pour voir toutes les données importées
+scan 'products'
+
+# Vérifier l'enregistrement numéro 8 (consultantla ville de l'enregistrement 8)
+get 'products','8',{COLUMN => 'cf:town'}

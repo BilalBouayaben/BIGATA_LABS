@@ -1,0 +1,2 @@
+# Test 1: ValueFilter avec substring:Sofa
+scan 'sales_ledger', {FILTER => "ValueFilter(=, 'substring:Sofa')"}

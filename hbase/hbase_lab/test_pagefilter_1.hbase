@@ -1,0 +1,2 @@
+# Test 8: PageFilter - limiter à 1 ligne uniquement
+scan 'sales_ledger', {FILTER => "PageFilter(1)"}

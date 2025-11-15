@@ -1,0 +1,2 @@
+# Test du filtre FamilyFilter - afficher uniquement les données de la famille customer
+scan 'sales_ledger', {FILTER => "FamilyFilter(=, 'binary:customer')"}
