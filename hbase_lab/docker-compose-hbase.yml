@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  hbase-standalone:
+    image: harisekhon/hbase:1.4
+    container_name: hbase-standalone
+    hostname: hbase-standalone
+    ports:
+      - "16010:16010"  # HBase Master Web UI
+      - "16030:16030"  # HBase RegionServer Web UI
+      - "2181:2181"    # ZooKeeper
+      - "16000:16000"  # HBase Master RPC
+      - "16020:16020"  # HBase RegionServer RPC
+    volumes:
+      - "C:/Users/lenovo/hadoop_project/BIGDATA_ENGINEERING_LABS:/shared_volume"
+    networks:
+      - hadoop-network
+    environment:
+      - HBASE_MANAGES_ZK=true
+    stdin_open: true
+    tty: true
+    command: /bin/bash -c "start-hbase.sh && tail -f /dev/null"
+
+networks:
+  hadoop-network:
+    external: true
+    name: docker_setup_hadoop-network
+

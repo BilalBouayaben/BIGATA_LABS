@@ -1,0 +1,3 @@
+create 'customers', 'customer', 'sales'
+list
+describe 'customers'
