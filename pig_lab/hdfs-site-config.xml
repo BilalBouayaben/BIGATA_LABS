@@ -1,0 +1,8 @@
+<property>
+    <name>dfs.webhdfs.enabled</name>
+    <value>true</value>
+</property>
+<property>
+    <name>dfs.bytes-per-checksum</name>
+    <value>512</value>
+</property>
